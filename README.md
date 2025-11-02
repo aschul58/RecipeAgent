@@ -1,5 +1,5 @@
-# RecipeAgent
-Agent for accessing and consulting my own recipes
+# Recipe Agent  
+Agent for accessing and consulting my own recipes.
 
 Everyone cooks differently. Over time, I’ve collected my own recipes — from my mom, grandma, friends, or things I’ve improvised myself — and stored them in a personal Notion page.  
 That’s why searching the web or asking ChatGPT for recipes often doesn’t help: I don’t want random “internet recipes”, I want to use *my* recipes and *my* way of cooking.
@@ -30,7 +30,7 @@ The goal is to automatically fill in missing parts like ingredients or cooking s
 
 **Implementation:**  
 Each recipe is checked for completeness using a simple text heuristic (number of lines, cooking terms, etc.).  
-If the recipe is incomplete, the agent enriches it by querying the **Spoonacular API** or, as a fallback, an **OpenAI model** (GPT-4o-mini).  
+If the recipe is incomplete, the agent enriches it by querying the **Spoonacular API** or, as a fallback, an **OpenAI GPT-4** model.  
 The enriched data (ingredients and steps) is cached locally in `enrichment_cache.json` for later reuse.
 
 ---
@@ -42,9 +42,9 @@ When I say something like:
 the agent should match that against my recipes and suggest the best options.
 
 **Implementation:**  
-This layer performs simple intent recognition and keyword matching between user input and the available recipes.  
-It can also delegate to the OpenAI API to generate a natural-language response.  
-The result is a ranked list of recipes from my personal collection, optionally enriched with missing details.
+This layer performs intent recognition and keyword matching between user input and the available recipes.  
+It can also delegate to the **OpenAI GPT-4** API to generate natural-language responses.  
+The result is a ranked list of recipes from my personal collection, enriched and structured for easy display.
 
 ---
 
@@ -54,8 +54,8 @@ To make the agent modular and testable, all logic is wrapped into a REST API.
 
 **Implementation:**  
 A lightweight **FastAPI** service exposes endpoints like `/chat` and `/plan`.  
-It takes user messages as input, processes them through the agent, and returns structured JSON responses.  
-The backend can be started locally or containerized for deployment.
+It takes user messages as input, processes them through the agent pipeline, and returns structured JSON responses.  
+The backend can run locally, in Docker, or on a cloud platform like Render.
 
 ---
 
@@ -64,21 +64,70 @@ The backend can be started locally or containerized for deployment.
 To interact with the system easily without the command line.
 
 **Implementation:**  
-A **Streamlit** app (`ui.py`) provides a small web interface.  
-It lets you enter natural-language queries, toggle the LLM option, and view the matched recipes and suggestions in a clean format.  
+A **Streamlit** app (`ui.py`) provides a minimal web interface with dark mode.  
+It allows:
+- Entering free-text recipe queries  
+- Selecting the number of answers  
+- Enabling or disabling GPT-4 for conversational reasoning (requires an OpenAI API key)  
+
 The app communicates with the FastAPI backend in real time.
+
+---
+
+## Tutorial and Screenshots
+
+### UI Overview
+Clean dark-mode interface for searching and exploring personal recipes.
+
+![UI Overview](docs/screenshots/screenshot_ui_main.png)
+
+---
+
+### Search Bar
+Enter any query like  
+> "I have carrots, onions, and rice."
+
+![Search Bar](docs/screenshots/screenshot_ui_searchbar.png)
+
+---
+
+### Results
+Results can mix personal and enriched data:
+- Two recipes enriched via the external API (in English)  
+- One personal recipe retrieved directly from Notion (in German)
+
+![Results](docs/screenshots/screenshot_ui_results.png)
+
+---
+
+### Settings
+Configure how the agent responds:
+- Number of answers  
+- Strict ingredient matching  
+- GPT-4 activation for better reasoning and conversation  
+
+![Settings](docs/screenshots/screenshot_ui_settings.png)
 
 ---
 
 ## Architecture Overview
 
+recipe_agent/
+├── apps/
+│ ├── api/ # FastAPI backend
+│ └── ui/ # Streamlit frontend
+├── recipe_agent/ # Core logic (retrieval, enrichment, LLM)
+├── unit_tests/ # Pytest-based tests
+├── Dockerfile
+└── requirements.txt
+
 
 - `notion_api.py` – handles data access and parsing from Notion  
-- `enrichment.py` – checks for completeness and enriches missing recipes  
-- `agent.py` – interprets natural language queries and matches recipes  
+- `enrichment.py` – enriches incomplete recipes with missing ingredients or steps  
+- `agent.py` – interprets natural-language queries and matches recipes  
 - `app.py` – FastAPI backend exposing `/chat` and `/plan` endpoints  
-- `ui.py` – Streamlit web interface for interaction  
-- `.env` – local environment file for storing API keys and configuration
+- `ui.py` – Streamlit web interface  
+- `.env` – environment configuration for API keys  
 
 ---
 
@@ -88,7 +137,32 @@ The app communicates with the FastAPI backend in real time.
 |------------|--------|
 | Backend | Python 3.12, FastAPI |
 | Frontend | Streamlit |
+| AI | OpenAI GPT-4 |
 | APIs | Notion API, Spoonacular API |
-| AI | OpenAI API (GPT-4o-mini) |
+| Infrastructure | Docker, Render |
 | Utilities | dotenv, requests, uvicorn |
+
+---
+
+## Run Locally
+
+```bash
+# 1. Clone repository
+git clone https://github.com/<yourname>/recipe-agent.git
+cd recipe-agent
+
+# 2. Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate    # (Windows: .venv\Scripts\activate)
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Start backend
+uvicorn apps.api.app:app --reload
+
+# 5. Start frontend
+streamlit run apps/ui/ui.py
+
+
 
