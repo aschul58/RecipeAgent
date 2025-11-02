@@ -11,7 +11,6 @@
 from __future__ import annotations
 import os
 from typing import List, Optional, Any, Dict
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -109,3 +108,7 @@ def plan(req: PlanRequest):
         for i in items
     ]
     return PlanResponse(query=req.pantry, items=mapped)
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}

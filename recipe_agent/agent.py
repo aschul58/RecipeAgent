@@ -17,6 +17,12 @@ from recipe_agent.enrichment import enrich_if_needed
 from recipe_agent.notion_api import get_recipes
 from recipe_agent.llm_answer import format_plan_with_llm
 
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s"
+)
+logger = logging.getLogger("recipe-agent")
 
 load_dotenv()
 
@@ -299,6 +305,12 @@ def _cli_once(args: List[str]):
 
 def _cli_chat():
     print("Recipe Agent – tippe 'exit' zum Beenden.")
+
+    start = time.time()
+    out = handle(req.message, use_llm=bool(req.use_llm))
+    logger.info({"route": "chat", "latency_ms": int((time.time()-start)*1000),
+             "use_llm": bool(req.use_llm), "result_count": len(out.get("results") or [])})
+
     while True:
         try:
             msg = input("> ").strip()
