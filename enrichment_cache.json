@@ -1,0 +1,111 @@
+{
+  "spaghetti bolognese": {
+    "ingredients": [
+      "2 tablespoons extra virgin olive oil",
+      "1 medium onion, minced fine",
+      "1 large carrot, minced fine",
+      "1 stalk celery, minced fine",
+      "1 pound ground beef (or mix of beef, pork",
+      "3 cloves garlic, minced",
+      "1 teaspoon crushed fennel seeds",
+      "1 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "1/4 teaspoon red pepper flakes, crushed",
+      "1/4 cup chopped basil",
+      "14 ounces cans diced tomatoes",
+      "1/2 cup red wine",
+      "1/2 cup milk (or cream)",
+      "salt and pepper to taste"
+    ],
+    "steps": [
+      "Heat oil in a medium saucepan over medium heat.",
+      "Add onions, carrots, and celery and cook until soft, about 10 minutes.",
+      "Add ground meat and brown, then add garlic and cook for 1 more minute.",
+      "Add fennel, salt, pepper, red pepper, basil, tomato and red wine and bring to a boil.",
+      "Reduce heat and simmer, uncovered, until reduced and thickened, about 30 minutes.",
+      "Add milk and simmer until absorbed and thickened.",
+      "Salt and pepper to taste and serve over cooked spaghetti or other pasta with a nice grating of Parmigiano Reggiano cheese."
+    ],
+    "source": "api:spoonacular:660820",
+    "fetched_at": 1762039572
+  },
+  "gulasch": {
+    "ingredients": [
+      "1 ounce x 9 package frozen artichoke hearts thawed",
+      "1 1/2 pounds beef stew meat cut into 1 inch cubes",
+      "1 (14 1/2 oz.) can beef broth",
+      "1 ounce x 14 can chunky tomatoes with garlic and 1 ounce x 6 can tomato paste",
+      "3 cups hot cooked noodles",
+      "cup dairy sour cream",
+      "1 teaspoon caraway seed or fennel seed",
+      "1 Clove garlic, minced",
+      "2 mediums onions, chopped",
+      "3 mediums potatoes cut into 1 inch cubes",
+      "1 teaspoon Salt",
+      "1In a 3 1/2, 4 or 5 quart crockery cooker, place potatoes, onions and garlic."
+    ],
+    "steps": [
+      "In a 3 1/2, 4 or 5 quart crockery cooker, place potatoes, onions and garlic.",
+      "Add beef. In a bowl combine broth, undrained tomatoes, tomato paste, paprika, caraway or fennel seed and salt.",
+      "Pour over all. cover; cook on low heat setting for 10-12 hours or on high heat setting for 5-6 hours. Stir thawed artichoke hearts into cooker. Cover and let stand for 10 minutes.",
+      "Serve over hot cooked noodles. Top each serving with a spoonful of sour cream.Makes 6 servings."
+    ],
+    "source": "api:spoonacular:647645",
+    "fetched_at": 1762039577
+  },
+  "zwiebelsuppe": {
+    "ingredients": [
+      "¼ cup salted butter",
+      "4-6 yellow onions, finely sliced",
+      "¼ Tsp. flour",
+      "½ cup sherry",
+      "5 cups beef broth",
+      "3 sprigs fresh thyme",
+      "3 sprigs fresh parsley",
+      "1 bay leaf",
+      "salt and pepper to taste",
+      "4 slices of a crusty French baguette",
+      "1 cup gruyere cheese, shredded"
+    ],
+    "steps": [
+      "Preheat oven to 400",
+      "In a large Dutch oven, melt butter over medium heat.",
+      "Add onions to the pot and sprinkle with flour. Reduce heat to medium low and cook for 45 minutes stirring occasionally. If the onions are cooking too quickly, reduce heat.",
+      "When the onions are tender and golden in colour, de-glaze the pan with sherry.",
+      "Pour beef broth into the pot and bring to a boil over medium heat.",
+      "Add herbs, salt and pepper to taste.",
+      "Reduce heat and simmer for 15 minutes.",
+      "Spray a cookie sheet with cooking spray. Butter slices of French bread and bake in the oven for 5-10 minutes until very dry. Set aside.",
+      "Remove herb stalks and bay leaf.",
+      "Ladle soup portions into four oven safe ramekins. Top with crusty French bread and sprinkle with cheese.",
+      "Place ramekins on a cookie sheet and bake uncovered at 400 for 5-10 minutes until cheese is bubbling. Broil for one minute more to brown the top.",
+      "Serve warm.",
+      "Serves 4"
+    ],
+    "source": "api:spoonacular:639597",
+    "fetched_at": 1762039581
+  },
+  "pancakes": {
+    "ingredients": [
+      "2 teaspoons Baking powder",
+      "1 teaspoon baking soda",
+      "6 tablespoons melted butter",
+      "2 large eggs lightly beaten",
+      "2 cups Flour",
+      "1 teaspoon ground cinnamon",
+      "1 teaspoon Ground ginger",
+      "2 cups milk",
+      "1/4 cup molasses",
+      "1 cup raisins",
+      "1 1/2 teaspoons salt"
+    ],
+    "steps": [
+      "Sift together flour, baking powder, salt, soda and spices.",
+      "Combine molasses, milk and eggs. Stir in melted butter.",
+      "Add molasses mixture to dry ingredients. Stir only until moistened. Gently fold in raisins.",
+      "Heat griddle or skillet over medium heat or to 375 degrees. Grease griddle with shortening. Griddle is ready when a few drops of water bubble and skitter rapidly around.For each pancake, pour scant 1/4 cup batter onto hot griddle. Cook pancakes until puffed and dry around edges. Turn and cook other sides until golden brown."
+    ],
+    "source": "api:spoonacular:644690",
+    "fetched_at": 1762039583
+  }
+}
