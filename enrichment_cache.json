@@ -107,5 +107,50 @@
     ],
     "source": "api:spoonacular:644690",
     "fetched_at": 1762039583
+  },
+  "pad thai": {
+    "ingredients": [
+      "Fish sauce, to taste",
+      "Thai palm sugar, to taste",
+      "4 limes",
+      "2 to 3 chilli padis",
+      "1 clove of garlic, mashed",
+      "2 shallots, mashed",
+      "1 tablespoon of dried shrimps, washed",
+      "1 tomato, cut into wedges",
+      "1 cup carrot, shredded",
+      "3 cups raw green mangoes, shredded",
+      "2 inches long beans cut into 1 pieces",
+      "4 tablespoons roasted coarse peanuts"
+    ],
+    "steps": [
+      "Pound all the ingredients in a clay mortar using a wooden pestle, then add carrot and mangoes.",
+      "Serve chilled with roasted coarse peanuts."
+    ],
+    "source": "api:spoonacular:663113",
+    "fetched_at": 1762125152
+  },
+  "thai suppe": {
+    "ingredients": [
+      "8 oz bamboo shoots (sliced and drained)",
+      "¼ cup brown sugar",
+      "1 lb chicken breast",
+      "13.5 oz coconut milk",
+      "1 teaspoon fish sauce (nam pla)",
+      "2 onions, slice",
+      "14 oz pineapple chunks (drained)",
+      "1/2 cup red bell pepper (julienne)",
+      "1 tablespoon red curry paste",
+      "250 grams snow peas, trimmed"
+    ],
+    "steps": [
+      "Pour coconut milk into saucepan. Over high heat, whisk in curry paste. If you prefer spicy cuisine, then add more red curry paste than suggested.",
+      "Add fish sauce and brown sugar.",
+      "Add basil, bamboo shoots, pineapple, onion, bell pepper, and snow peas. Bring to a boil stirring frequently.Reduce heat and cook 3 minutes until thickened.Optional:  If adding meat, boneless/skinless chicken, beef, or shrimp is recommended.",
+      "Cut one pound of meat into bite sized pieces.",
+      "Add raw meat to finished curry sauce and allow to cook over medium heat an additional 10 minutes or until done."
+    ],
+    "source": "api:spoonacular:663144",
+    "fetched_at": 1762125157
   }
 }
