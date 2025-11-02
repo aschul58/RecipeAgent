@@ -79,7 +79,7 @@ The app communicates with the FastAPI backend in real time.
 ### UI Overview
 Clean dark-mode interface for searching and exploring personal recipes.
 
-![UI Overview](docs/screenshots/screenshot_ui_main.png)
+![UI Overview](docs/screenshots/landing_page.png)
 
 ---
 
@@ -87,7 +87,7 @@ Clean dark-mode interface for searching and exploring personal recipes.
 Enter any query like  
 > "I have carrots, onions, and rice."
 
-![Search Bar](docs/screenshots/screenshot_ui_searchbar.png)
+![Search Bar](docs/screenshots/search_request.png)
 
 ---
 
@@ -96,7 +96,7 @@ Results can mix personal and enriched data:
 - Two recipes enriched via the external API (in English)  
 - One personal recipe retrieved directly from Notion (in German)
 
-![Results](docs/screenshots/screenshot_ui_results.png)
+![Results](docs/screenshots/answers.png)
 
 ---
 
@@ -106,7 +106,7 @@ Configure how the agent responds:
 - Strict ingredient matching  
 - GPT-4 activation for better reasoning and conversation  
 
-![Settings](docs/screenshots/screenshot_ui_settings.png)
+![Settings](docs/screenshots/settings.png)
 
 ---
 
