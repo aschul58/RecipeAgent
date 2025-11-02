@@ -1,2 +1,28 @@
-# Secrets
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Environment variables
 .env
+.env.*
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Cache & Build
+*.egg-info/
+dist/
+build/
+*.log
+
+# Docker
+*.pid
+*.dbdata

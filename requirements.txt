@@ -1,0 +1,6 @@
+fastapi~=0.115
+uvicorn[standard]~=0.30
+streamlit~=1.39
+python-dotenv~=1.0
+requests~=2.32
+openai~=1.51
