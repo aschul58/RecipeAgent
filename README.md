@@ -112,16 +112,6 @@ Configure how the agent responds:
 
 ## Architecture Overview
 
-recipe_agent/
-├── apps/
-│ ├── api/ # FastAPI backend
-│ └── ui/ # Streamlit frontend
-├── recipe_agent/ # Core logic (retrieval, enrichment, LLM)
-├── unit_tests/ # Pytest-based tests
-├── Dockerfile
-└── requirements.txt
-
-
 - `notion_api.py` – handles data access and parsing from Notion  
 - `enrichment.py` – enriches incomplete recipes with missing ingredients or steps  
 - `agent.py` – interprets natural-language queries and matches recipes  
