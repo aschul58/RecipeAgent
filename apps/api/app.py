@@ -13,6 +13,7 @@ import os
 from typing import List, Optional, Any, Dict
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse, HTMLResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -112,3 +113,8 @@ def plan(req: PlanRequest):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/", include_in_schema=False)
+def root():
+    # Entweder auf Swagger weiterleiten:
+    return RedirectResponse(url="/docs")
