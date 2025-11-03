@@ -1,6 +1,11 @@
 # Recipe Agent  
 Agent for accessing and consulting my own recipes.
 
+A live version of the web interface is available here:  
+[https://recipeagent-brn4h8juawnvmvfkhq5ngg.streamlit.app/](https://recipeagent-brn4h8juawnvmvfkhq5ngg.streamlit.app/)
+
+*(Please note: the app runs on the free Streamlit tier and may take a few minutes to start up after inactivity.)*
+
 Everyone cooks differently. Over time, I’ve collected my own recipes — from my mom, grandma, friends, or things I’ve improvised myself — and stored them in a personal Notion page.  
 That’s why searching the web or asking ChatGPT for recipes often doesn’t help: I don’t want random “internet recipes”, I want to use *my* recipes and *my* way of cooking.
 
